@@ -1,3 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Adora Bouton';
+  src:
+    url('assets/fonts/AdoraBouton/adorabouton.woff') format('woff'),
+    url('assets/fonts/AdoraBouton/adorabouton.ttf') format('truetype'),
+    url('assets/fonts/AdoraBouton/AdoraBouton.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'EB Garamond';
+  src:
+    url('assets/fonts/EBGaramond/EBGaramond-VariableFont.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cormorant';
+  src:
+    url('assets/fonts/Cormorant/Cormorant-VariableFont.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+
+/* @font-face {
+  font-family: 'Sweet Buttermilk Script';
+  src: url('/fonts/SweetButtermilkScript-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}  */
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,7 +45,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.bg-rotate-custom {
+  background-image: url('/src/assets/bg_three.jpg');
+  background-size: contain;
+  background-position: right center;
+  background-repeat: no-repeat;
+  transform: scaleX(-1);
+}
+
+.bg-flip-vertical {
+  background-size: cover;
+  background-position: center;
+  transform: scaleY(-1);
 }
