@@ -6,14 +6,14 @@ export const data = [
     img: bride,
     title: 'The Bride',
     name: 'Dara Puspita Rahmawati',
-    description: 'Putri Kedua',
+    description: 'Putri dari',
     parent: 'Bapak Arif Rubiyantoro & Ibu Darmini Pujiati',
   },
   {
     img: groom,
     title: 'The Groom',
     name: 'Asta Zeska Dimitri',
-    description: 'Putra Pertama',
+    description: 'Putra dari',
     parent: 'Bapak Nurul Iman & Ibu Nur Islamiyah',
   }
 

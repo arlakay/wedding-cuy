@@ -12,8 +12,10 @@ const WelcomePageMobile = () => {
                     <div className="text-start">
                         <h1 className="text-3xl font-bold font-adora-bouton">The Wedding of</h1>
                         <p className="text-7xl font-semibold font-cormorant my-4">DARA <br />ASTA </p>
-                        <p className="text-lg font-normal font-cormorant my-4">Om Swastyastu</p>
-                        <p className="text-lg font-normal font-cormorant">Atas Asung Kertha Wara Nugraha Ida Sang Hyang Widhi Wasa/ Tuhan Yang Maha Esa, kami bermaksud mengundang Bapak/ Ibu/ Saudara/ i pada acara resepsi pernikahan kami.</p>
+                        {/* <p className="text-lg font-normal font-cormorant my-4">Om Swastyastu</p> */}
+                        <p className="text-md font-normal font-cormorant italic my-2 pt-10">“We’re all a little weird. And life is a little weird. And when we find someone whose weirdness is compatible with ours, we join up with them and fall into mutually satisfying weirdness—and call it love—true love”</p>
+                        <p className="text-md font-normal font-cormorant ">— Robert Fulghum</p>
+
                     </div>
 
 

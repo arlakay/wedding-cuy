@@ -78,7 +78,7 @@ const ThankYou = () => {
         const interval = setInterval(() => {
             setNextImageIndex((currentImageIndex + 1) % images.length);
             setCurrentImageIndex(nextImageIndex);
-        }, 5000); // Change image every 5 seconds
+        }, 3000); // Change image every 5 seconds
 
         return () => clearInterval(interval);
     }, [currentImageIndex, nextImageIndex]);
@@ -103,7 +103,7 @@ const ThankYou = () => {
                 style={{
                     backgroundImage: `url(${images[nextImageIndex]})`,
                     opacity: 0,
-                    filter: 'blur(10px)',
+                    filter: 'blur(0px)',
                 }}
             />
             {/* <div
@@ -137,7 +137,7 @@ const ThankYou = () => {
                 <div className="flex-grow"></div>
                 <div className=" p-4 text-center z-20">
                     <h1 className="text-center font-eb-garamond text-xl md:text-2xl lg:text-2xl mb-8 pb-4 text-champagne-gold">THANK YOU!</h1>
-                    <h1 className=" text-center font-adora-bouton text-4xl md:text-5xl lg:text-6xl mb-8 text-champagne-gold">Asta & Dara</h1>
+                    <h1 className=" text-center font-adora-bouton text-4xl md:text-5xl lg:text-6xl mb-8 text-champagne-gold">Dara & Asta</h1>
                 </div>
             </div>
         </div >

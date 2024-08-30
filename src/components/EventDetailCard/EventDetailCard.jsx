@@ -64,11 +64,11 @@ const EventDetailCard = ({
             </div>
             <div className="my-4 flex items-center">
                 <LocationOn className="text-gray-900" />
-                <span className="ml-3 text-lg font-eb-garamond font-semibold sm:text-xs">
+                <span className="ml-3 text-lg font-eb-garamond font-semibold sm:text-sm">
                     {eventVenue}
                 </span>
             </div>
-            <p className="text-sm font-eb-garamond leading-6 sm:text-xs">
+            <p className=" font-eb-garamond text-md sm:text-sm">
                 {formattedText}
             </p>
         </div>

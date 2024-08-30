@@ -32,7 +32,7 @@ const LandingPageInvitation = ({ setInvitationOpen }) => {
                 </div>
                 <p className="mt-8 text-black text-center">
                     <p className="text-lg font-normal font-eb-garamond my-2">
-                        Kepada Yth.
+                        To:
                     </p>
                     {invTo && (
                         <span className="font-eb-garamond font-medium text-3xl md:text-2xl">{capitalizeEachWord(invTo)}</span>

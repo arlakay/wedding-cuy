@@ -18,13 +18,14 @@ import Wishes from '../../sections/Wishes/Wishes'
 import PictureGalleryMobile from '../../sections/PictureGallery/PictureGalleryMobile'
 import ThankYou from '../../sections/ThankYou/ThankYou'
 import Quotes from '../../sections/Quotes/Quotes'
+import Carousel from '../../sections/ThankYou/ThankYouV2'
 
 const WeddingInvitation = () => {
     return (
         <div>
             {/* <MobileStyledComponent /> */}
             <WelcomePageMobile />
-            <Quotes />
+            {/* <Quotes /> */}
             <GroomBrideMobile />
             <EventDetailsMobile />
             <Rsvp />
@@ -32,6 +33,7 @@ const WeddingInvitation = () => {
             {/* <PictureGalleryMobile /> */}
             <WeddingGift />
             <ThankYou />
+            <Carousel />
             <FooterMobile />
 
             {/* <WelcomePage /> */}

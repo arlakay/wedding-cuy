@@ -7,7 +7,7 @@ import { Button } from '@material-ui/core';
 
 
 const EventDetailsMobile = () => {
-    const venueUrl = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d991.5165552639693!2d106.8501041!3d-6.2550064!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3b4881c5b61%3A0x8dd71b9a303f542!2sMakarti%20Muktitama%20Hall!5e0!3m2!1sen!2sid!4v1724479572793!5m2!1sen!2sid"
+    const venueUrl = "https://maps.app.goo.gl/6Mmx436pp8rcLu7e8"
 
     const eventDetails = [
         {

@@ -16,15 +16,15 @@ const ProfileCard = ({ img, title, name, description, parent }) => {
             <div className="flex overflow-hidden rounded-t-xl items-center justify-center">
                 <LazyLoadImage src={img} alt={title} className="object-cover w-full h-auto" />
             </div>
-            <div className="flex flex-col items-center p-4 sm:p-6">
+            <div className="flex flex-col items-center p-4 sm:p-4">
                 <p className="text-lg sm:text-sm font-cormorant font-medium text-center">
                     {title && title.toUpperCase()}
                 </p>
                 <p className="text-5xl sm:text-4xl font-adora-bouton text-center my-4">{getFirstWord(name)}</p>
                 <p className="text-2xl sm:text-lg font-cormorant font-semibold text-center ">{name}</p>
                 <div className="my-2 w-full h-[2px] bg-[#121212]" />
-                <p className="font-cormorant  text-center text-lg sm:text-sm">{description}</p>
-                <p className="font-cormorant  text-center text-lg sm:text-sm">{parent}</p>
+                <p className="font-cormorant  text-center text-md sm:text-sm">{description}</p>
+                <p className="font-cormorant  text-center text-md sm:text-sm">{parent}</p>
             </div>
         </div>
     );

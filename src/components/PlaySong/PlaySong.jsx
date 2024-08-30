@@ -16,6 +16,7 @@ const PlaySong = ({ isInvitationOpen }) => {
         console.log('inside 2nd:', isPlaying)
         if (isPlaying) {
             audioRef.current.volume = 0.5
+            audioRef.current.loop = true
             audioRef.current.play()
         } else {
             audioRef.current.pause()
