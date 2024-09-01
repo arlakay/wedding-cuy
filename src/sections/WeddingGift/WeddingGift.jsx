@@ -76,7 +76,7 @@ const WeddingGift = () => {
                             className="bg-[#1e1e1e] text-champagne-gold font-medium font-eb-garamond text-lg py-2 px-5 rounded-lg"
                             onClick={openDialog}
                         >
-                            Lihat
+                            Open
                         </button>
 
                         <BankDetailsDialog

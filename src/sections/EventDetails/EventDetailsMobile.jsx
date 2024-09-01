@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react';
 import EventDetailCard from '../../components/EventDetailCard/EventDetailCard';
 import GoogleMapLocation from '../../components/GoogleMapLocation/GoogleMapLocation';
 import CountdownTimer from '../CountdownTimer/CountdownTimer';
-import { FaMap } from 'react-icons/fa';
+import { FaCalendarPlus, FaMap } from 'react-icons/fa';
 import { Button } from '@material-ui/core';
+import AddToCalendar from 'react-add-to-calendar';
 
+import { generateICal } from '../../utils/ICal'; // Adjust the path as necessary
 
 const EventDetailsMobile = () => {
     const venueUrl = "https://maps.app.goo.gl/6Mmx436pp8rcLu7e8"
@@ -26,7 +28,36 @@ const EventDetailsMobile = () => {
             address:
                 'Jl. TMP. Kalibata No.17, RT.6/RW.7, Rawajati, Kec. Pancoran, Kota Jakarta Selatan 12750 \n\n\nLocated in: Kementerian Desa, Pembangunan Daerah Tertinggal dan Transmigrasi',
         },
-    ]
+    ];
+
+    const eventAddToCalendar = {
+        title: 'Wedding Dara & Asta',
+        description: 'Acara Resepsi Pernikahan Dara & Asta',
+        location: 'Balai Makarti Muktitama',
+        startTime: new Date(2024, 10, 6, 11, 0), // Format: new Date(year, month, day, hour, minute)
+        endTime: new Date(2024, 10, 6, 13, 0),
+        startDate: new Date('2024-10-06T11:00:00'),
+        endDate: new Date('2024-10-06T13:00:00'),
+    };
+
+    const handleAddToCalendar = () => {
+        const icalData = generateICal(eventAddToCalendar.title, eventAddToCalendar.description, eventAddToCalendar.location, eventAddToCalendar.startDate, eventAddToCalendar.endDate);
+        const blob = new Blob([icalData], { type: 'text/calendar;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+
+        // Create a temporary link element to trigger the download
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `${eventAddToCalendar.title.replace(/\s+/g, '_')}.ics`;
+        document.body.appendChild(link);
+        link.click();
+
+        // Clean up
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+    };
+
+
     return (
         <div
             className="w-full sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto p-4 bg-base-8 shadow-md bg-cover bg-center"
@@ -38,7 +69,7 @@ const EventDetailsMobile = () => {
                             <p className="text-4xl font-bold font-adora-bouton">Event Details </p>
                         </div>
 
-                        <div className='my-8 grid-cols-2'>
+                        <div className='my-4 grid-cols-2'>
                             {eventDetails.map((item, idx) => (
                                 <EventDetailCard
                                     eventName={item.name}
@@ -50,30 +81,32 @@ const EventDetailsMobile = () => {
                                 />
                             ))}
                         </div>
-                        <div className='my-8'>
-                            <CountdownTimer />
-                        </div>
-                        <div className='my-8 text-center flex items-center justify-center'>
+
+                        <div className='text-center flex items-center justify-center'>
                             {/* <GoogleMapLocation /> */}
                             <button
                                 style={{
                                     display: 'flex',
                                     alignItems: 'center',
                                     backgroundColor: '#121212', // Button color
-                                    color: '#fff', // Text color
-                                    border: 'none',
-                                    borderRadius: '4px',
-                                    padding: '10px 20px',
-                                    fontSize: '16px',
-                                    cursor: 'pointer',
                                     transition: 'background-color 0.3s',
                                 }}
-
                                 onClick={() => window.open(venueUrl)}
-                                className="mt-8 bg-[#121212] text-champagne-gold font-cormorant font-extrabold text-lg py-2 px-5 rounded-lg border-none cursor-pointer sm:text-base sm:py-2.5 sm:px-5"
+                                className="bg-[#121212] text-champagne-gold font-eb-garamond font-medium text-lg py-2 px-5 rounded-lg border-none"
                             >
-                                <FaMap style={{ marginRight: '8px', fontSize: '20px' }} /> {/* Icon with some spacing */}
-                                Lokasi Acara
+                                <FaMap style={{ marginRight: '8px', fontSize: '20px' }} />
+                                See Location
+                            </button>
+                        </div>
+
+                        <div className='my-4'>
+                            <CountdownTimer />
+                        </div>
+
+                        <div className='text-center flex items-center justify-center mb-4'>
+                            <button onClick={handleAddToCalendar} className="flex items-center bg-[#121212] text-champagne-gold font-eb-garamond font-medium text-lg py-2 px-5 rounded-lg border-none">
+                                <FaCalendarPlus className="mr-2" />
+                                Add to Calendar
                             </button>
                         </div>
 

@@ -93,7 +93,7 @@ const Rsvp = () => {
 
                             <button
                                 type="submit"
-                                className="mt-4 bg-black text-champagne-gold font-kaushan text-lg py-2 px-5 rounded-lg sm:text-base sm:py-2.5 sm:px-5"
+                                className="mt-4 bg-black text-champagne-gold font-eb-garamond font-medium text-lg py-2 px-5 rounded-lg sm:text-base sm:py-2.5 sm:px-5"
                             >
                                 Submit
                             </button>
