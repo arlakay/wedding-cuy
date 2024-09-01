@@ -38,12 +38,15 @@ const Wishes = () => {
                 const top20RowsDateEdit = rows.slice(1).map(row => ({
                     name: row[1],
                     wish: row[2],
-                    timestamp: formatDate(new Date(row[0])) // Convert serial date
+                    timestamp: new Date(row[0]) // Convert serial date
                 }));
 
-                top20RowsDateEdit.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+                const top20RowsSorted = top20RowsDateEdit.sort((a, b) => {
+                    console.log(a.timestamp);
+                    return new Date(b.timestamp) - new Date(a.timestamp);
+                });
 
-                setWishes(top20RowsDateEdit); // Extract data
+                setWishes(top20RowsSorted); // Extract data
             }
         } catch (error) {
             setError(error.message);
@@ -108,10 +111,16 @@ const Wishes = () => {
     };
 
     const formatDate = (date) => {
+        if (!(date instanceof Date)) {
+            // Handle invalid date case
+            return 'Invalid Date';
+        }
+
         const now = new Date();
         if (date.toDateString() === now.toDateString()) {
             return 'Today';
         }
+
         return date.toLocaleDateString('id-ID', {
             weekday: 'long',
             year: 'numeric',
@@ -131,7 +140,7 @@ const Wishes = () => {
         <div
             className="w-full sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto p-4 bg-base-6 shadow-md bg-cover bg-center"
         >
-            <div className="flex flex-col h-screen">
+            <div className="flex flex-col h-auto">
                 <div className="flex-grow flex flex-col justify-center px-4">
                     <div className="text-start">
                         <h1 className="text-4xl font-bold font-adora-bouton my-8">Wishes</h1>
@@ -146,7 +155,7 @@ const Wishes = () => {
                                     placeholder="Name"
                                     value={name}
                                     onChange={(e) => setName(e.target.value)}
-                                    className="w-full p-3 border-2 border-gray-300 rounded-md focus:border-blue-500 focus:outline-none"
+                                    className="w-full p-3 border-2 border-gray-300 rounded-md focus:border-blue-500 focus:outline-none font-cormorant"
                                     required
                                 />
                             </div>
@@ -157,7 +166,7 @@ const Wishes = () => {
                                     onChange={(e) => setWish(e.target.value)}
                                     rows="5" // Adjust rows to fit your needs
                                     cols="40" // Adjust cols to fit your needs
-                                    className="w-full p-3 border-2 border-gray-300 rounded-md focus:border-blue-500 focus:outline-none"
+                                    className="w-full p-3 border-2 border-gray-300 rounded-md focus:border-blue-500 focus:outline-none font-cormorant"
 
                                 />
                             </div>
@@ -171,56 +180,25 @@ const Wishes = () => {
                     </div>
 
 
-                    {/* // list wishes */}
-                    {/* <div className="w-full  mx-auto p-6">
-                        <ul className="space-y-1">
-                            {currentWishes.map((wish, index) => (
-                                <li key={index} className="p-3 border border-gray-300 rounded-md">
-                                    {wish}
-
-                                </li>
-                            ))}
-                        </ul>
-                        <div className="flex justify-center mt-6">
-                            <nav>
-                                <ul className="flex space-x-2">
-                                    {pageNumbers.map(number => (
-                                        <li key={number}>
-                                            <button
-                                                onClick={() => paginate(number)}
-                                                className={`px-4 py-2 border rounded-md ${currentPage === number ? 'bg-blue-500 text-white' : 'bg-white text-blue-500'}`}
-                                            >
-                                                {number}
-                                            </button>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </nav>
-                        </div>
-                    </div> */}
 
                     <div className='w-full bg-[#F8F8F8] rounded-xl flex flex-col my-2'>
                         <ul>
                             {currentItems.map((item, index) => (
                                 <>
-                                    <li key={index} className="flex items-center p-2 border-b ">
+                                    <li key={index} className="flex items-center px-2 py-1 border-b ">
                                         <div className="flex-shrink-0">
                                             {/* <FaHeart className="text-red-500 w-8 h-8" /> Example icon */}
                                             <img src={heartIcon} alt="Heart" className="w-8 h-8" />
                                         </div>
-                                        <div className="ml-4">
-                                            <p className='text-md  font-medium'>{item.name}</p>
-                                            <p className='text-md  font-normal'>{item.wish}</p>
-                                            <span className='flex flex-auto items-center my-1'><FaRegClock className='mr-2' /> <p className='text-xs font-light'>{item.timestamp}</p></span>
-                                            {selectedIndices.map((colIndex, colIndexIdx) => (
-                                                <>
-                                                    {/* <p key={colIndexIdx} className="text-gray-700">
-                                                        {`${item[colIndex] || 'N/A'}`}
-                                                    </p> */}
+                                        <div className="ml-2 ">
+                                            <p className='text-sm font-cormorant font-medium'>{item.name}</p>
+                                            <p className='text-sm font-cormorant font-normal'>{item.wish}</p>
+                                            <span className='flex flex-auto items-center mt-1'><FaRegClock className='mr-1' />
+                                                <p className='text-xs font-cormorant font-light'>
+                                                    {formatDate(item.timestamp)}
+                                                </p>
+                                            </span>
 
-
-                                                </>
-                                            ))}
                                         </div>
                                     </li>
                                     <hr />
@@ -230,14 +208,14 @@ const Wishes = () => {
 
                         <div className="pagination grid grid-cols-3 gap-4 ">
                             <button
-                                className={classNames('pagination-button', { 'disabled': currentPage === 1 })}
+                                className={classNames('pagination-button px-4 py-2 rounded-md font-cormorant font-normal transition-all', { 'disabled': currentPage === 1 })}
                                 onClick={() => handlePageChange(currentPage - 1)}
                             >
                                 Previous
                             </button>
-                            <span>Page {currentPage} of {totalPages}</span>
+                            <span className='px-4 py-2 rounded-md font-cormorant font-normal transition-all'>Page {currentPage} of {totalPages}</span>
                             <button
-                                className={classNames('pagination-button', { 'disabled': currentPage === totalPages })}
+                                className={classNames('pagination-button px-4 py-2 rounded-md font-cormorant font-normal transition-all', { 'disabled': currentPage === totalPages })}
                                 onClick={() => handlePageChange(currentPage + 1)}
                             >
                                 Next

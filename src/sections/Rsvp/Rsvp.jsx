@@ -63,7 +63,7 @@ const Rsvp = () => {
                                     value={name}
                                     onChange={(e) => setName(e.target.value)}
                                     required
-                                    className="w-full p-3 border-2 border-gray-300 rounded-md focus:border-blue-500 focus:outline-none mb-4"
+                                    className="w-full p-3 border-2 border-gray-300 rounded-md focus:border-blue-500 focus:outline-none mb-4 font-cormorant"
                                 />
                             </div>
                             <div className="flex flex-col">
@@ -71,7 +71,7 @@ const Rsvp = () => {
                                     value={confirmation}
                                     onChange={(e) => setConfirmation(e.target.value)}
                                     required
-                                    className="w-full p-3 border-2 border-gray-300 rounded-md focus:border-blue-500 focus:outline-none mb-4"
+                                    className="w-full p-3 border-2 border-gray-300 rounded-md focus:border-blue-500 focus:outline-none mb-4 font-cormorant"
                                 >
                                     <option value="" disabled>Konfirmasi Kehadiran</option>
                                     <option value="hadir">Hadir</option>
@@ -83,7 +83,7 @@ const Rsvp = () => {
                                     value={totalPersons}
                                     onChange={(e) => setTotalPersons(e.target.value)}
                                     required
-                                    className="w-full p-3 border-2 border-gray-300 rounded-md focus:border-blue-500 focus:outline-none mb-4"
+                                    className="w-full p-3 border-2 border-gray-300 rounded-md focus:border-blue-500 focus:outline-none mb-4 font-cormorant"
                                 >
                                     <option value="" disabled>Jumlah</option>
                                     <option value="1 Orang">1 Orang</option>

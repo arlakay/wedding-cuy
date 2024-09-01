@@ -1,50 +1,33 @@
 import React, { useState, useEffect } from 'react';
 import Toast from '../../components/Toast/Toast';
 import { FaGift } from 'react-icons/fa';
+import BankDetailsDialog from '../../components/BankDetailsDialog/BankDetailsDialog';
 
+import bca from '../../assets/bca.png'
+import seabank from '../../assets/SeaBank.svg'
 
 const WeddingGift = () => {
-    const [copySuccess, setCopySuccess] = useState('');
-    const textToCopyRekAsta = "This is the text to copy";
-    const textToCopyRekDara = "This is the text to copy";
 
-    const copyRekeningAsta = async () => {
-        try {
-            await navigator.clipboard.writeText(textToCopyRekAsta);
-            setCopySuccess('Text copied!');
-            showToastNotification('Text copied!')
+    const [isDialogOpen, setDialogOpen] = useState(false);
 
-        } catch (err) {
-            setCopySuccess('Failed to copy!');
-            showToastNotification('Failed to copy!')
+    const bankDetails = [
+        {
+            bankName: 'Seabank',
+            accountHolder: 'Dara Puspita Rahmawati',
+            accountNumber: '901605201231',
+            image: seabank
+        },
+        {
+            bankName: 'BCA',
+            accountHolder: 'Asta Zeska Dimitri',
+            accountNumber: '5211101556',
+            image: bca
 
         }
-    };
+    ];
 
-    const copyRekeningDara = async () => {
-        try {
-            await navigator.clipboard.writeText(textToCopyRekDara);
-            setCopySuccess('Text copied!');
-            showToastNotification('Text copied!')
-        } catch (err) {
-            setCopySuccess('Failed to copy!');
-            showToastNotification('Failed to copy!')
-        }
-    };
-
-    const [showToast, setShowToast] = useState(false);
-    const [toastMessage, setToastMessage] = useState('');
-
-    const showToastNotification = (message) => {
-        setToastMessage(message);
-        setShowToast(true);
-
-        // Hide the toast after 3 seconds
-        setTimeout(() => {
-            setShowToast(false);
-        }, 3000);
-    };
-
+    const openDialog = () => setDialogOpen(true);
+    const closeDialog = () => setDialogOpen(false);
 
     return (
         <div
@@ -59,7 +42,7 @@ const WeddingGift = () => {
                             <FaGift className="text-custom-brown" size={48} />
                         </div>
 
-                        <p className="text-lg font-medium font-eb-garamond">
+                        <p className="text-lg font-normal font-cormorant">
                             Kehadiran dan doa restu Bapak/Ibu/Sudara/i merupakan anugerah terindah bagi kami. Namun, apabila Bapak/Ibu/Saudara/i tidak dapat hadir dan hendak memberikan tanda kasih kepada kami, dapat menggunakan fitur di bawah ini.
                         </p>
 
@@ -87,6 +70,20 @@ const WeddingGift = () => {
                             <span className="text-gray-700 text-lg mt-2 sm:mt-0 font-eb-garamond ">a.n Dara Puspita Rahmawati</span>
                             <span className="text-gray-700 text-md mt-2 sm:mt-0 font-eb-garamond font-medium">COPY</span>
                         </div> */}
+                    </div>
+                    <div className="flex flex-col items-center justify-center my-6">
+                        <button
+                            className="bg-[#1e1e1e] text-champagne-gold font-medium font-eb-garamond text-lg py-2 px-5 rounded-lg"
+                            onClick={openDialog}
+                        >
+                            Lihat
+                        </button>
+
+                        <BankDetailsDialog
+                            isOpen={isDialogOpen}
+                            onClose={closeDialog}
+                            bankDetails={bankDetails}
+                        />
                     </div>
                     {/* <h1 className="text-center text-3xl font-bold mb-2">Centered Heading</h1>
                     <p className="text-lg">This is some centered content.</p>

@@ -1,20 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import bg1 from '../../assets/thankyou/0K0A3571-min.jpg';
-import bg2 from '../../assets/thankyou/0K0A3574-min.jpg';
-import bg3 from '../../assets/thankyou/0K0A3578-min.jpg';
-import bg4 from '../../assets/thankyou/0K0A3581-min.jpg';
-import bg5 from '../../assets/thankyou/0K0A3584-min.jpg';
-import bg6 from '../../assets/thankyou/0K0A3585-min.jpg';
-import bg7 from '../../assets/thankyou/0K0A3588-min.jpg';
-import bg8 from '../../assets/thankyou/0K0A3590-min.jpg';
-import bg9 from '../../assets/thankyou/0K0A3592-min.jpg';
-import bg10 from '../../assets/thankyou/0K0A3594-min.jpg';
-import bg11 from '../../assets/thankyou/0K0A3595-min.jpg';
-import bg12 from '../../assets/thankyou/0K0A3610-min.jpg';
-import bg13 from '../../assets/thankyou/0K0A3624-min.jpg';
-import bg14 from '../../assets/thankyou/0K0A3626-min.jpg';
-import bg15 from '../../assets/thankyou/0K0A3627-min.jpg';
-import bg16 from '../../assets/thankyou/0K0A3629-min.jpg';
+
+
+import bg1 from '../../assets/thankyou/1.png';
+import bg2 from '../../assets/thankyou/2.png';
+import bg3 from '../../assets/thankyou/3.png';
+import bg4 from '../../assets/thankyou/4.png';
+import bg5 from '../../assets/thankyou/5.png';
+import bg6 from '../../assets/thankyou/6.png';
+import bg7 from '../../assets/thankyou/7.png';
+import bg8 from '../../assets/thankyou/8.png';
+import bg9 from '../../assets/thankyou/9.png';
+import bg10 from '../../assets/thankyou/10.png';
+import bg11 from '../../assets/thankyou/11.png';
+import bg12 from '../../assets/thankyou/12.png';
+import bg13 from '../../assets/thankyou/13.png';
+import bg14 from '../../assets/thankyou/14.png';
+import bg15 from '../../assets/thankyou/15.png';
+import bg16 from '../../assets/thankyou/16.png';
 
 const ThankYou = () => {
     // Array of imported image URLs
@@ -41,44 +43,11 @@ const ThankYou = () => {
         preloadImages(images);
     }, [images]);
 
-    // Effect to update the image every 5 seconds
-    // useEffect(() => {
-    //     const intervalId = setInterval(async () => {
-    //         console.log(`2 ${intervalId}`);
-    //         setIsTransitioning(true); // Start transition
-    //         setTransitionState('fade-out'); // Start fading out the current image
-    //         setOpacity(0.6);
-
-    //         // After the fade-out transition completes, switch images and fade in the new image
-    //         setTimeout(() => {
-    //             console.log(`3 ${intervalId}`);
-
-    //             setCurrentImageIndex((prevIndex) => {
-    //                 const newIndex = (prevIndex + 1) % images.length;
-    //                 setNextImageIndex((newIndex + 1) % images.length);
-
-    //                 setIsTransitioning(false); // End transition
-    //                 setOpacity(1);
-
-    //                 console.log('Current background image:', images[(prevIndex + 1) % images.length]);
-    //                 console.log('Next background image:', images[(newIndex + 1) % images.length]);
-
-    //                 return newIndex;
-    //             });
-
-    //             setTransitionState('fade-in'); // Start fading in the new image
-    //         }, 2500); // Match this time with the CSS transition duration
-    //     }, 5000);
-
-    //     return () => clearInterval(intervalId);
-    // }, [images.length]);
-
-
     useEffect(() => {
         const interval = setInterval(() => {
             setNextImageIndex((currentImageIndex + 1) % images.length);
             setCurrentImageIndex(nextImageIndex);
-        }, 3000); // Change image every 5 seconds
+        }, 2000); // Change image every 5 seconds
 
         return () => clearInterval(interval);
     }, [currentImageIndex, nextImageIndex]);

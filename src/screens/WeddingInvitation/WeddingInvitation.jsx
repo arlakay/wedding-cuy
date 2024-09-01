@@ -19,6 +19,7 @@ import PictureGalleryMobile from '../../sections/PictureGallery/PictureGalleryMo
 import ThankYou from '../../sections/ThankYou/ThankYou'
 import Quotes from '../../sections/Quotes/Quotes'
 import Carousel from '../../sections/ThankYou/ThankYouV2'
+import ThankYouV3 from '../../sections/ThankYou/ThankYouV3'
 
 const WeddingInvitation = () => {
     return (
@@ -33,7 +34,8 @@ const WeddingInvitation = () => {
             {/* <PictureGalleryMobile /> */}
             <WeddingGift />
             <ThankYou />
-            <Carousel />
+            {/* <Carousel /> */}
+            {/* <ThankYouV3 /> */}
             <FooterMobile />
 
             {/* <WelcomePage /> */}

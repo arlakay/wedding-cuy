@@ -47,28 +47,28 @@ const EventDetailCard = ({
         // </div>
 
         <div className="p-4 bg-white text-black w-full max-w-md mx-auto shadow-lg rounded-xl mb-8 flex flex-col ">
-            <p className="text-center text-2xl font-eb-garamond sm:text-xl">
+            <p className="text-center text-2xl font-cormorant sm:text-xl">
                 {eventName}
             </p>
             <div className="my-4 flex items-center">
                 <CalendarToday className="text-gray-900 " />
-                <span className="ml-3 text-lg font-eb-garamond font-semibold sm:text-xs">
+                <span className="ml-3 text-lg font-cormorant font-medium sm:text-xs">
                     {eventDate}
                 </span>
             </div>
             <div className=" flex items-center">
                 <QueryBuilder className="text-gray-900" />
-                <span className="ml-3 text-lg font-eb-garamond font-semibold sm:text-xs">
+                <span className="ml-3 text-lg font-cormorant font-medium sm:text-xs">
                     {eventTime}
                 </span>
             </div>
             <div className="my-4 flex items-center">
                 <LocationOn className="text-gray-900" />
-                <span className="ml-3 text-lg font-eb-garamond font-semibold sm:text-sm">
+                <span className="ml-3 text-lg font-cormorant font-medium sm:text-sm">
                     {eventVenue}
                 </span>
             </div>
-            <p className=" font-eb-garamond text-md sm:text-sm">
+            <p className=" font-cormorant text-md sm:text-sm">
                 {formattedText}
             </p>
         </div>

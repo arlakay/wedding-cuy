@@ -12,7 +12,7 @@ const GroomBrideMobile = () => {
             <div className="flex flex-col h-auto">
                 <div className="flex-grow flex flex-col justify-center px-4">
                     <div className="text-start">
-                        <p className="text-7xl font-semibold font-cormorant my-4">GROOM ~<br />BRIDE</p>
+                        <p className="text-4xl font-bold font-adora-bouton my-4">Bride & Groom</p>
 
                         <div className="flex flex-col md:flex-row justify-center gap-4 my-8">
                             {data.map((el, idx) => (

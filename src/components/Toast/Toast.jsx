@@ -11,7 +11,7 @@ const Toast = ({ message, onClose }) => {
     }, [onClose]);
 
     return (
-        <div className="relative  bg-green-700 text-white p-2 rounded-lg shadow-lg">
+        <div className="relative  bg-green-700 text-white p-2 rounded-lg shadow-lg my-2">
             {message}
         </div>
     );
