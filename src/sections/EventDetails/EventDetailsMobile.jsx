@@ -103,6 +103,21 @@ const EventDetailsMobile = () => {
                             <CountdownTimer />
                         </div>
 
+                        {/* Add to Calendar Button */}
+                        <div className='flex items-center justify-center'>
+                            <div className='inline-flex items-center mb-4 font-eb-garamond text-lg'>
+                                <FaCalendarPlus className="mr-2" />
+                                <AddToCalendar
+                                    buttonIconClass={
+                                        <FaCalendarPlus className="mr-2" />
+                                    }
+                                    event={eventAddToCalendar}
+                                    buttonLabel="Add to Calendar"
+                                    buttonClassName="space-x-2 px-5 py-2 bg-[#121212] text-champagne-gold rounded-lg border-none"
+                                />
+                            </div>
+                        </div>
+
                         <div className='text-center flex items-center justify-center mb-4'>
                             <button onClick={handleAddToCalendar} className="flex items-center bg-[#121212] text-champagne-gold font-eb-garamond font-medium text-lg py-2 px-5 rounded-lg border-none">
                                 <FaCalendarPlus className="mr-2" />
