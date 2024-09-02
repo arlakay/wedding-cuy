@@ -1,10 +1,8 @@
-// BankDetailsDialog.js
 import React, { useState } from 'react';
 import Toast from '../Toast/Toast';
 
 const BankDetailsDialog = ({ isOpen, onClose, bankDetails }) => {
 
-    const [copySuccess, setCopySuccess] = useState('');
     const [showToast, setShowToast] = useState(false);
     const [toastMessage, setToastMessage] = useState('');
 
@@ -25,10 +23,8 @@ const BankDetailsDialog = ({ isOpen, onClose, bankDetails }) => {
 
             navigator.clipboard.writeText(accountNumber);
             // alert(`No rekening ${bankDetails[index].accountHolder} disalin!`);
-            setCopySuccess('No rekening disalin!');
             showToastNotification('No rekening disalin!')
         } catch (err) {
-            setCopySuccess('Gagal menyalin!');
             showToastNotification('Gagal menyalin!')
         }
     };

@@ -1,12 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import EventDetailCard from '../../components/EventDetailCard/EventDetailCard';
-import GoogleMapLocation from '../../components/GoogleMapLocation/GoogleMapLocation';
 import CountdownTimer from '../CountdownTimer/CountdownTimer';
 import { FaCalendarPlus, FaMap } from 'react-icons/fa';
-import { Button } from '@material-ui/core';
-import AddToCalendar from 'react-add-to-calendar';
-
-import { generateICal } from '../../utils/ICal'; // Adjust the path as necessary
 
 const EventDetailsMobile = () => {
     const venueUrl = "https://maps.app.goo.gl/6Mmx436pp8rcLu7e8"
@@ -30,33 +25,19 @@ const EventDetailsMobile = () => {
         },
     ];
 
-    const eventAddToCalendar = {
-        title: 'Wedding Dara & Asta',
-        description: 'Acara Resepsi Pernikahan Dara & Asta',
-        location: 'Balai Makarti Muktitama',
-        startTime: new Date(2024, 10, 6, 11, 0), // Format: new Date(year, month, day, hour, minute)
-        endTime: new Date(2024, 10, 6, 13, 0),
-        startDate: new Date('2024-10-06T11:00:00'),
-        endDate: new Date('2024-10-06T13:00:00'),
+    const handleAddToGoogleCalendar = () => {
+        const event = {
+            title: 'Wedding Dara & Asta',
+            description: 'Acara Resepsi Pernikahan Dara & Asta',
+            location: 'Balai Makarti Muktitama',
+            startTime: "2024-10-06T11:00:00",
+            endTime: "2024-10-06T13:00:00",
+        };
+
+        const url = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(event.title)}&dates=${encodeURIComponent(event.startTime.replace(/-|:|\.\d+/g, ''))}/${encodeURIComponent(event.endTime.replace(/-|:|\.\d+/g, ''))}&details=${encodeURIComponent(event.description)}&location=${encodeURIComponent(event.location)}`;
+
+        window.open(url, '_blank');
     };
-
-    const handleAddToCalendar = () => {
-        const icalData = generateICal(eventAddToCalendar.title, eventAddToCalendar.description, eventAddToCalendar.location, eventAddToCalendar.startDate, eventAddToCalendar.endDate);
-        const blob = new Blob([icalData], { type: 'text/calendar;charset=utf-8' });
-        const url = URL.createObjectURL(blob);
-
-        // Create a temporary link element to trigger the download
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = `${eventAddToCalendar.title.replace(/\s+/g, '_')}.ics`;
-        document.body.appendChild(link);
-        link.click();
-
-        // Clean up
-        document.body.removeChild(link);
-        URL.revokeObjectURL(url);
-    };
-
 
     return (
         <div
@@ -88,7 +69,7 @@ const EventDetailsMobile = () => {
                                 style={{
                                     display: 'flex',
                                     alignItems: 'center',
-                                    backgroundColor: '#121212', // Button color
+                                    backgroundColor: '#121212',
                                     transition: 'background-color 0.3s',
                                 }}
                                 onClick={() => window.open(venueUrl)}
@@ -104,22 +85,10 @@ const EventDetailsMobile = () => {
                         </div>
 
                         {/* Add to Calendar Button */}
-                        <div className='flex items-center justify-center'>
-                            <div className='inline-flex items-center mb-4 font-eb-garamond text-lg'>
-                                <FaCalendarPlus className="mr-2" />
-                                <AddToCalendar
-                                    buttonIconClass={
-                                        <FaCalendarPlus className="mr-2" />
-                                    }
-                                    event={eventAddToCalendar}
-                                    buttonLabel="Add to Calendar"
-                                    buttonClassName="space-x-2 px-5 py-2 bg-[#121212] text-champagne-gold rounded-lg border-none"
-                                />
-                            </div>
-                        </div>
-
                         <div className='text-center flex items-center justify-center mb-4'>
-                            <button onClick={handleAddToCalendar} className="flex items-center bg-[#121212] text-champagne-gold font-eb-garamond font-medium text-lg py-2 px-5 rounded-lg border-none">
+                            <button
+                                onClick={handleAddToGoogleCalendar}
+                                className="flex items-center bg-[#121212] text-champagne-gold font-eb-garamond font-medium text-lg py-2 px-5 rounded-lg border-none">
                                 <FaCalendarPlus className="mr-2" />
                                 Add to Calendar
                             </button>

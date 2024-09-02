@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { parse } from 'qs';
-import HeaderSeparator from '../../components/HeaderSeparator/HeaderSeparator';
 
 const LandingPageInvitation = ({ setInvitationOpen }) => {
     const [invTo, setInvTo] = useState('')

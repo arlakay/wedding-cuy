@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import Toast from '../../components/Toast/Toast';
+import React, { useState } from 'react';
 import { FaGift } from 'react-icons/fa';
 import BankDetailsDialog from '../../components/BankDetailsDialog/BankDetailsDialog';
 

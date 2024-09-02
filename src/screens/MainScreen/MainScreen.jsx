@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import WeddingInvitation from '../WeddingInvitation/WeddingInvitation';
 import LandingPageInvitation from '../LandingPageInvitation/LandingPageInvitation';
 import PlaySong from '../../components/PlaySong/PlaySong';
-import LiftUpTransition from '../../components/LiftUpTransition/LiftUpTransition';
 import { AnimatePresence, motion } from 'framer-motion';
 
 const MainScreen = () => {

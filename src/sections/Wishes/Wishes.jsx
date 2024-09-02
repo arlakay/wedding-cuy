@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaRegClock, FaHeart } from 'react-icons/fa';
+import { FaRegClock } from 'react-icons/fa';
 
 import classNames from 'classnames';
 import heartIcon from '../../assets/heart-icon-jst.png';
@@ -105,11 +105,6 @@ const Wishes = () => {
             });
     };
 
-    const serialToDate = (serial) => {
-        const startDate = new Date(1899, 11, 30); // 30 Dec 1899
-        return new Date(startDate.getTime() + serial * 24 * 60 * 60 * 1000);
-    };
-
     const formatDate = (date) => {
         if (!(date instanceof Date)) {
             // Handle invalid date case
@@ -132,9 +127,6 @@ const Wishes = () => {
 
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error: {error.message}</p>;
-
-    const selectedColumns = ["Nama", "Ucapan", "Timestamp"];
-    const selectedIndices = selectedColumns.map(col => headers.indexOf(col)).filter(index => index !== -1);
 
     return (
         <div

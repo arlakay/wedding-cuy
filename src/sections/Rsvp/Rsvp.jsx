@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { FaHeart } from 'react-icons/fa';
-
+import React, { useState } from 'react';
 
 const Rsvp = () => {
     const [name, setName] = useState('');
