@@ -6,13 +6,13 @@ const FooterMobile = () => {
 
     return (
         <div
-            className="w-full sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto p-4 bg-[#F8F8F8] shadow-md bg-cover bg-center"
+            className="w-full sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto p-4 bg-champagne-gold shadow-md bg-cover bg-center"
         >
             <div className="flex flex-col h-auto">
                 <div className="flex-grow flex flex-col justify-center px-4">
                     <div className="text-center ">
                         <p className="my-1 font-eb-garamond"></p>
-                        <FaHeart className="mx-auto text-[24px] text-champagne-gold" />
+                        <FaHeart className="mx-auto text-[24px] text-[#F8F8F8]" />
                         <p className="my-1 font-eb-garamond">© 2024 Dara & Asta. All rights reserved.</p>
                     </div>
                     {/* <h1 className="text-center text-3xl font-bold mb-2">Centered Heading</h1>

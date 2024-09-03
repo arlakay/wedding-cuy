@@ -46,7 +46,7 @@ const EventDetailCard = ({
         //     </p>
         // </div>
 
-        <div className="p-4 bg-white text-black w-full max-w-md mx-auto shadow-lg rounded-xl mb-8 flex flex-col ">
+        <div className="p-4 bg-white text-black w-full max-w-md mx-auto shadow-2xl rounded-lg mb-8 flex flex-col ">
             <p className="text-center text-2xl font-cormorant sm:text-xl">
                 {eventName}
             </p>

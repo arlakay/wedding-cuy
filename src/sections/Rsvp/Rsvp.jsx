@@ -50,7 +50,7 @@ const Rsvp = () => {
                         </p>
                     </div>
 
-                    <div className="text-start bg-white max-w-lg rounded-lg p-6 space-y-4">
+                    <div className="text-start bg-white max-w-lg shadow-2xl rounded-lg p-6 space-y-4">
                         <form
                             onSubmit={handleSubmit}
                         >

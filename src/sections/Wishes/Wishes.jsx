@@ -139,86 +139,95 @@ const Wishes = () => {
                         <p className="my-1 text-xl font-normal font-cormorant">Berikan ucapan dan doa untuk kami.</p>
                     </div>
 
-                    <div className="text-start bg-white max-w-lg rounded-lg p-6">
-                        <form onSubmit={handleSubmit}>
-                            <div className="flex flex-col my-2">
-                                <input
-                                    type="text"
-                                    placeholder="Name"
-                                    value={name}
-                                    onChange={(e) => setName(e.target.value)}
-                                    className="w-full p-3 border-2 border-gray-300 rounded-md focus:border-blue-500 focus:outline-none font-cormorant"
-                                    required
-                                />
-                            </div>
-                            <div className="flex flex-col my-2">
-                                <textarea
-                                    placeholder="Enter your wishes here..."
-                                    value={wish}
-                                    onChange={(e) => setWish(e.target.value)}
-                                    rows="5" // Adjust rows to fit your needs
-                                    cols="40" // Adjust cols to fit your needs
-                                    className="w-full p-3 border-2 border-gray-300 rounded-md focus:border-blue-500 focus:outline-none font-cormorant"
+                    <div className="bg-white shadow-2xl rounded-lg overflow-hidden">
+                        <div className="text-start max-w-lg p-6">
+                            <form onSubmit={handleSubmit}>
+                                <div className="flex flex-col my-2">
+                                    <input
+                                        type="text"
+                                        placeholder="Name"
+                                        value={name}
+                                        onChange={(e) => setName(e.target.value)}
+                                        className="w-full p-3 border-2 border-gray-300 rounded-md focus:border-blue-500 focus:outline-none font-cormorant"
+                                        required
+                                    />
+                                </div>
+                                <div className="flex flex-col my-2">
+                                    <textarea
+                                        placeholder="Enter your wishes here..."
+                                        value={wish}
+                                        onChange={(e) => setWish(e.target.value)}
+                                        rows="5" // Adjust rows to fit your needs
+                                        cols="40" // Adjust cols to fit your needs
+                                        className="w-full p-3 border-2 border-gray-300 rounded-md focus:border-blue-500 focus:outline-none font-cormorant"
 
-                                />
-                            </div>
-                            <button
-                                type="submit"
-                                className="mt-4 bg-[#121212] text-champagne-gold font-eb-garamond font-medium text-lg py-2 px-5 rounded-lg sm:text-base sm:py-2.5 sm:px-5"
-                            >
-                                Submit
-                            </button>
-                        </form>
-                    </div>
+                                    />
+                                </div>
+                                <button
+                                    type="submit"
+                                    className="mt-4 bg-[#121212] text-champagne-gold font-eb-garamond font-medium text-lg py-2 px-5 rounded-lg sm:text-base sm:py-2.5 sm:px-5"
+                                >
+                                    Submit
+                                </button>
+                            </form>
+                        </div>
+                        {
+                            currentItems && currentItems.length ? <hr /> : <></>
+                        }
+                        <div className='w-full flex flex-col my-1'>
+                            <ul>
+                                {currentItems.map((item, index) => (
+                                    <>
+                                        <li key={index} className="flex items-center px-2 py-1 border-b ">
+                                            <div className="flex-shrink-0">
+                                                {/* <FaHeart className="text-red-500 w-8 h-8" /> Example icon */}
+                                                <img src={heartIcon} alt="Heart" className="w-8 h-8" />
+                                            </div>
+                                            <div className="ml-2 ">
+                                                <p className='text-sm font-cormorant font-medium'>{item.name}</p>
+                                                <p className='text-sm font-cormorant font-normal'>{item.wish}</p>
+                                                <span className='flex flex-auto items-center mt-1 mb-1'>
+                                                    <FaRegClock className='mr-1' />
+                                                    <p className='text-xs font-cormorant font-light'>
+                                                        {formatDate(item.timestamp)}
+                                                    </p>
+                                                </span>
 
+                                            </div>
+                                        </li>
+                                        <hr />
+                                    </>
+                                ))}
+                            </ul>
 
+                            {
+                                currentItems && currentItems.length ?
+                                    <div className="pagination grid grid-cols-3 ">
+                                        <button
+                                            className={classNames('pagination-button px-4 py-2 rounded-md font-cormorant font-normal transition-all', { 'disabled': currentPage === 1 })}
+                                            onClick={() => handlePageChange(currentPage - 1)}
+                                        >
+                                            Previous
+                                        </button>
+                                        <span className='px-4 py-2 rounded-md font-cormorant font-normal transition-all'>Page {currentPage} of {totalPages}</span>
+                                        <button
+                                            className={classNames('pagination-button px-4 py-2 rounded-md font-cormorant font-normal transition-all', { 'disabled': currentPage === totalPages })}
+                                            onClick={() => handlePageChange(currentPage + 1)}
+                                        >
+                                            Next
+                                        </button>
+                                    </div>
+                                    :
+                                    <></>
+                            }
 
-                    <div className='w-full bg-[#F8F8F8] rounded-xl flex flex-col my-2'>
-                        <ul>
-                            {currentItems.map((item, index) => (
-                                <>
-                                    <li key={index} className="flex items-center px-2 py-1 border-b ">
-                                        <div className="flex-shrink-0">
-                                            {/* <FaHeart className="text-red-500 w-8 h-8" /> Example icon */}
-                                            <img src={heartIcon} alt="Heart" className="w-8 h-8" />
-                                        </div>
-                                        <div className="ml-2 ">
-                                            <p className='text-sm font-cormorant font-medium'>{item.name}</p>
-                                            <p className='text-sm font-cormorant font-normal'>{item.wish}</p>
-                                            <span className='flex flex-auto items-center mt-1'><FaRegClock className='mr-1' />
-                                                <p className='text-xs font-cormorant font-light'>
-                                                    {formatDate(item.timestamp)}
-                                                </p>
-                                            </span>
-
-                                        </div>
-                                    </li>
-                                    <hr />
-                                </>
-                            ))}
-                        </ul>
-
-                        <div className="pagination grid grid-cols-3 gap-4 ">
-                            <button
-                                className={classNames('pagination-button px-4 py-2 rounded-md font-cormorant font-normal transition-all', { 'disabled': currentPage === 1 })}
-                                onClick={() => handlePageChange(currentPage - 1)}
-                            >
-                                Previous
-                            </button>
-                            <span className='px-4 py-2 rounded-md font-cormorant font-normal transition-all'>Page {currentPage} of {totalPages}</span>
-                            <button
-                                className={classNames('pagination-button px-4 py-2 rounded-md font-cormorant font-normal transition-all', { 'disabled': currentPage === totalPages })}
-                                onClick={() => handlePageChange(currentPage + 1)}
-                            >
-                                Next
-                            </button>
                         </div>
                     </div>
-
                 </div>
 
             </div>
-        </div >
+
+        </div>
     );
 };
 

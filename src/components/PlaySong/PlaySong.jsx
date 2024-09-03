@@ -25,7 +25,7 @@ const PlaySong = ({ isInvitationOpen }) => {
 
     return (
         <button
-            className="fixed bottom-4 md:bottom-8 right-4 md:right-8 p-1 text-white border-none rounded-lg bg-champagne-gold z-[1000]"
+            className="fixed bottom-4 md:bottom-8 right-4 md:right-8 p-1 text-white border-none shadow-md rounded-lg bg-champagne-gold z-[1000]"
             onClick={() => setIsPlaying(!isPlaying)}
         >
             {isPlaying ? (
