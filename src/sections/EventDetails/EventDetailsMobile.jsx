@@ -16,7 +16,7 @@ const EventDetailsMobile = () => {
                 `Jl. TMP. Kalibata No.17, RT.6/RW.7, Rawajati, Kec. Pancoran, Kota Jakarta Selatan 12750 \n\n\nLocated in: Kementerian Desa, Pembangunan Daerah Tertinggal dan Transmigrasi`,
         },
         {
-            name: 'Resepsi Nikah',
+            name: 'Resepsi',
             date: 'Minggu, 6 Oktober 2024',
             time: '11:00 - 13:00',
             venue: 'Balai Makarti Muktitama',

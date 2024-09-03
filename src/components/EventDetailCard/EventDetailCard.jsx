@@ -52,19 +52,19 @@ const EventDetailCard = ({
             </p>
             <div className="my-4 flex items-center">
                 <CalendarToday className="text-gray-900 " />
-                <span className="ml-3 text-lg font-cormorant font-medium sm:text-xs">
+                <span className="ml-3 text-lg font-cormorant font-bold sm:text-xs">
                     {eventDate}
                 </span>
             </div>
             <div className=" flex items-center">
                 <QueryBuilder className="text-gray-900" />
-                <span className="ml-3 text-lg font-cormorant font-medium sm:text-xs">
+                <span className="ml-3 text-lg font-cormorant font-bold sm:text-xs">
                     {eventTime}
                 </span>
             </div>
             <div className="my-4 flex items-center">
                 <LocationOn className="text-gray-900" />
-                <span className="ml-3 text-lg font-cormorant font-medium sm:text-sm">
+                <span className="ml-3 text-lg font-cormorant font-bold sm:text-sm">
                     {eventVenue}
                 </span>
             </div>

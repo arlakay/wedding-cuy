@@ -57,7 +57,7 @@ const Rsvp = () => {
                             <div className="flex flex-col">
                                 <input
                                     type="text"
-                                    placeholder="Nama"
+                                    placeholder="Name"
                                     value={name}
                                     onChange={(e) => setName(e.target.value)}
                                     required

@@ -1,6 +1,6 @@
 // Carousel.js
 import React, { useState, useEffect, useRef } from 'react';
-import { AnimatePresence, motion, useAnimation } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 
 import bg1 from '../../assets/thankyou/1.png';
 import bg2 from '../../assets/thankyou/2.png';

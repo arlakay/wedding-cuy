@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-
 import bg1 from '../../assets/thankyou/1.png';
 import bg2 from '../../assets/thankyou/2.png';
 import bg3 from '../../assets/thankyou/3.png';

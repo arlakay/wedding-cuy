@@ -42,7 +42,7 @@ const WeddingGift = () => {
                         </div>
 
                         <p className="text-lg font-normal font-cormorant">
-                            Kehadiran dan doa restu Bapak/Ibu/Sudara/i merupakan anugerah terindah bagi kami. Namun, apabila Bapak/Ibu/Saudara/i tidak dapat hadir dan hendak memberikan tanda kasih kepada kami, dapat menggunakan fitur di bawah ini.
+                            Kehadiran dan doa restu Bapak/Ibu/Saudara/i merupakan anugerah terindah bagi kami. Namun, apabila Bapak/Ibu/Saudara/i tidak dapat hadir dan hendak memberikan tanda kasih kepada kami, dapat menggunakan fitur di bawah ini.
                         </p>
 
                         {/* <div className="relative max-w-xs mx-auto p-4 bg-gray-200 border-4 border-white rounded-lg shadow-lg my-4 flex flex-col justify-between items-center gap-2 mt-8">

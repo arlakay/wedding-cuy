@@ -1,25 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import bg1 from '../../assets/thankyou/0K0A3571-min.jpg';
-import bg2 from '../../assets/thankyou/0K0A3574-min.jpg';
-import bg3 from '../../assets/thankyou/0K0A3578-min.jpg';
-import bg4 from '../../assets/thankyou/0K0A3581-min.jpg';
-import bg5 from '../../assets/thankyou/0K0A3584-min.jpg';
-import bg6 from '../../assets/thankyou/0K0A3585-min.jpg';
-import bg7 from '../../assets/thankyou/0K0A3588-min.jpg';
-import bg8 from '../../assets/thankyou/0K0A3590-min.jpg';
-import bg9 from '../../assets/thankyou/0K0A3592-min.jpg';
-import bg10 from '../../assets/thankyou/0K0A3594-min.jpg';
-import bg11 from '../../assets/thankyou/0K0A3595-min.jpg';
-import bg12 from '../../assets/thankyou/0K0A3610-min.jpg';
-import bg13 from '../../assets/thankyou/0K0A3624-min.jpg';
-import bg14 from '../../assets/thankyou/0K0A3626-min.jpg';
-import bg15 from '../../assets/thankyou/0K0A3627-min.jpg';
-import bg16 from '../../assets/thankyou/0K0A3629-min.jpg';
 
-
-import bg17 from '../../assets/photo-1.webp';
-import bg18 from '../../assets/photo-2.webp';
-import bg19 from '../../assets/photo-3.webp';
+import bg17 from '../../assets/thankyou/1.png';
+import bg18 from '../../assets/thankyou/2.png';
+import bg19 from '../../assets/thankyou/3.png';
 import LazyLoad from 'react-lazyload';
 
 // Array of imported image URLs

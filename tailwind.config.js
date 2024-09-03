@@ -7,29 +7,6 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'cover-img': "url('/src/assets/cover_bg.png')",
-        'cover-img-two': "url('/src/assets/cover_bg_2.jpg')",
-        'backdrop-img-one': "url('/src/assets/bg_one.jpg')",
-        'backdrop-img-two': "url('/src/assets/bg_two.jpg')",
-        'backdrop-img-three': "url('/src/assets/bg_three.jpg')",
-        'backdrop-img-four': "url('/src/assets/bg_four.jpg')",
-        'backdrop-img-five': "url('/src/assets/bg_five.jpg')",
-        'backdrop-img-five-ext': "url('/src/assets/bg_five_ext.jpg')",
-        'backdrop-img-six': "url('/src/assets/bg_six.jpg')",
-        'backdrop-img-seven': "url('/src/assets/bg_seven.jpg')",
-        'backdrop-img-eight': "url('/src/assets/bg_eight.jpg')",
-        'backdrop-img-nine': "url('/src/assets/bg_nine.jpg')",
-        'backdrop-img-ten': "url('/src/assets/bg_ten.jpg')",
-        'backdrop-img-ten-flip': "url('/src/assets/bg_ten_flip.jpg')",
-        'backdrop-wdp-cover': "url('/src/assets/wdp_cover.png')",
-        'cover-front': "url('/src/assets/bg_cover_front.jpg')",
-        'cover_front_two': "url('/src/assets/bg_cover_front_2.jpg')",
-        'header-img': "url('/src/assets/header_bg.jpg')",
-        'header-img-mobile': "url('/src/assets/header_bg.jpg')",
-        'venue-bg': "url('/src/assets/mempelai.jpg')",
-        'ornament-name': "url('/src/assets/ornamen_nama.png')",
-        'ornament-flower': "url('/src/assets/ornamen_bunga_pojok.jpg')",
-        'batic-accent': "url('/src/assets/batik_aksen_one.jpg')",
         'base-1': "url('/src/assets/background/bg1.jpg')",
         'base-2': "url('/src/assets/background/bg2.png')",
         'base-3': "url('/src/assets/background/bg3.png')",
@@ -66,10 +43,10 @@ module.exports = {
         },
       },
       fontFamily: {
-        'kaushan': ['Kaushan Script', 'cursive'],
-        'poppins': ['Poppins', 'sans-serif'],
-        'playfair': ['Playfair Display', 'serif'],
-        'pacifico': ['Pacifico', 'cursive'],
+        // 'kaushan': ['Kaushan Script', 'cursive'],
+        // 'poppins': ['Poppins', 'sans-serif'],
+        // 'playfair': ['Playfair Display', 'serif'],
+        // 'pacifico': ['Pacifico', 'cursive'],
         'adora-bouton': ['Adora Bouton', 'sans-serif'], // 'sans-serif' as a fallback
         'eb-garamond': ['EB Garamond', 'sans-serif'], // Custom font family
         'cormorant': ['Cormorant', 'sans-serif'], // Custom font family

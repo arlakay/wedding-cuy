@@ -45,14 +45,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.bg-rotate-custom {
-  background-image: url('/src/assets/bg_three.jpg');
-  background-size: contain;
-  background-position: right center;
-  background-repeat: no-repeat;
-  transform: scaleX(-1);
-}
-
 .bg-flip-vertical {
   background-size: cover;
   background-position: center;
