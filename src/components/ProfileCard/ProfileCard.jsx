@@ -13,7 +13,7 @@ const ProfileCard = ({ img, title, name, description, parent }) => {
 
     return (
         <div className="flex flex-col bg-white shadow-2xl rounded-lg mx-auto max-w-md md:w-1/2">
-            <div className="flex overflow-hidden rounded-t-xl items-center justify-center">
+            <div className="flex overflow-hidden rounded-t-lg items-center justify-center">
                 <LazyLoadImage src={img} alt={title} className="object-cover w-full h-auto" />
             </div>
             <div className="flex flex-col items-center p-4 sm:p-4">

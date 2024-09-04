@@ -51,7 +51,7 @@ const BankDetailsDialog = ({ isOpen, onClose, bankDetails }) => {
 
                         <button
                             onClick={() => copyToClipboard(detail.accountNumber, index)}
-                            className="bg-custom-brown text-champagne-gold py-2 px-4 rounded text-md font-eb-garamond font-medium"
+                            className="bg-[#121212] text-champagne-gold py-2 px-5 rounded-lg text-md font-eb-garamond font-medium"
                         >
                             Copy
                         </button>
@@ -68,7 +68,7 @@ const BankDetailsDialog = ({ isOpen, onClose, bankDetails }) => {
                 <div className="flex justify-end mt-4">
                     <button
                         onClick={onClose}
-                        className=" mt-4 bg-[#1e1e1e] text-white py-2 px-4 rounded font-eb-garamond"
+                        className=" mt-4 bg-[#121212] text-champagne-gold py-2 px-5 rounded-lg font-eb-garamond font-medium"
                     >
                         Close
                     </button>
