@@ -9,16 +9,6 @@ const LandingPageInvitation = ({ setInvitationOpen }) => {
         setInvTo(invTo.to)
     }, [])
 
-    const capitalizeEachWord = (str) => {
-        return str
-            .split(' ')
-            .map(word =>
-                word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
-            )
-            .join(' ');
-    };
-
-
     return (
         <div className="bg-base-3 md:bg-base-3-landscape bg-cover bg-no-repeat bg-center">
             <div className="flex flex-col items-center justify-center h-screen bg-base-3-landscape-transparent md:bg-base-3-landscape-transparent bg-cover bg-no-repeat bg-center">
@@ -34,7 +24,7 @@ const LandingPageInvitation = ({ setInvitationOpen }) => {
                         To:
                     </p>
                     {invTo && (
-                        <span className="font-eb-garamond font-medium text-xl md:text-2xl">{capitalizeEachWord(invTo)}</span>
+                        <span className="font-eb-garamond font-medium text-xl md:text-2xl">{invTo}</span>
                     )}
                     <p className="text-md font-normal font-eb-garamond ">
                         We are getting married, and we want you <br /> to be part of our
