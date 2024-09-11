@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 
 import bg1 from '../../assets/thankyou/1.png';
 import bg2 from '../../assets/thankyou/2.png';
@@ -17,18 +17,25 @@ import bg14 from '../../assets/thankyou/14.png';
 import bg15 from '../../assets/thankyou/15.png';
 import bg16 from '../../assets/thankyou/16.png';
 
+const shuffleArray = (array) => {
+    let shuffledArray = array.slice(); // Create a copy of the array
+    for (let i = shuffledArray.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]]; // Swap elements
+    }
+    return shuffledArray;
+};
+
 const ThankYou = () => {
     // Array of imported image URLs
-    const images = [bg1, bg2, bg3, bg4, bg5, bg6, bg7, bg8, bg9, bg10, bg11, bg12, bg13, bg14, bg15, bg16];
+    // const images = [bg1, bg2, bg3, bg4, bg5, bg6, bg7, bg8, bg9, bg10, bg11, bg12, bg13, bg14, bg15, bg16];
+    const images = useMemo(() => shuffleArray([
+        bg1, bg2, bg3, bg4, bg5, bg6, bg7, bg8, bg9, bg10, bg11, bg12, bg13, bg14, bg15, bg16
+    ]), []);
 
     // State to keep track of the current background image index
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [nextImageIndex, setNextImageIndex] = useState((currentImageIndex + 1) % images.length);
-
-    // State to manage transition effect
-    const [transitionState, setTransitionState] = useState('fade-in');
-    const [opacity, setOpacity] = useState(1);
-    const [isTransitioning, setIsTransitioning] = useState(false);
 
     // Preload images
     useEffect(() => {
@@ -49,8 +56,7 @@ const ThankYou = () => {
         }, 2000); // Change image every 5 seconds
 
         return () => clearInterval(interval);
-    }, [currentImageIndex, nextImageIndex]);
-
+    }, [images.length, currentImageIndex, nextImageIndex]);
 
     return (
         <div

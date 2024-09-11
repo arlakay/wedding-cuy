@@ -36,6 +36,17 @@ const Rsvp = () => {
             });
     };
 
+    const handleConfirmationChange = (e) => {
+        const value = e.target.value;
+        setConfirmation(value);
+
+        // Set totalPersons to an empty string if 'tidak hadir' is selected
+        if (value === 'tidak hadir') {
+            setTotalPersons('');
+        }
+    };
+
+    const isTotalPersonsDisabled = confirmation === 'tidak hadir';
 
     return (
         <div
@@ -67,7 +78,7 @@ const Rsvp = () => {
                             <div className="flex flex-col">
                                 <select
                                     value={confirmation}
-                                    onChange={(e) => setConfirmation(e.target.value)}
+                                    onChange={handleConfirmationChange}
                                     required
                                     className="w-full p-3 border-2 border-gray-300 rounded-md focus:border-blue-500 focus:outline-none mb-4 font-cormorant"
                                 >
@@ -81,7 +92,8 @@ const Rsvp = () => {
                                     value={totalPersons}
                                     onChange={(e) => setTotalPersons(e.target.value)}
                                     required
-                                    className="w-full p-3 border-2 border-gray-300 rounded-md focus:border-blue-500 focus:outline-none mb-4 font-cormorant"
+                                    disabled={isTotalPersonsDisabled}
+                                    className={`w-full p-3 border-2 border-gray-300 rounded-md focus:border-blue-500 focus:outline-none mb-4 font-cormorant ${isTotalPersonsDisabled ? 'bg-gray-200 cursor-not-allowed' : ''}`}
                                 >
                                     <option value="" disabled>Jumlah</option>
                                     <option value="1 Orang">1 Orang</option>
@@ -106,8 +118,8 @@ const Rsvp = () => {
                     <h1 className="text-center font-eb-garamond text-xl md:text-2xl lg:text-2xl mb-8 pb-4">THANK YOU!</h1>
                     <h1 className=" text-center font-adora-bouton text-4xl md:text-5xl lg:text-6xl mb-8">Asta & Dara</h1>
                 </div> */}
-            </div>
-        </div>
+            </div >
+        </div >
     );
 };
 
