@@ -18,15 +18,43 @@ const BankDetailsDialog = ({ isOpen, onClose, bankDetails }) => {
 
     if (!isOpen) return null;
 
-    const copyToClipboard = (accountNumber, index) => {
-        try {
+    // const copyToClipboard = (accountNumber, index) => {
+    //     try {
 
-            navigator.clipboard.writeText(accountNumber);
-            // alert(`No rekening ${bankDetails[index].accountHolder} disalin!`);
-            showToastNotification('No rekening disalin!')
-        } catch (err) {
-            showToastNotification('Gagal menyalin!')
+    //         navigator.clipboard.writeText(accountNumber);
+    //         showToastNotification('No rekening disalin!')
+    //     } catch (err) {
+    //         showToastNotification('Gagal menyalin!')
+    //     }
+    // };
+
+    const copyToClipboard = (accountNumber) => {
+        if (navigator.clipboard) {
+            navigator.clipboard.writeText(accountNumber)
+                .then(() => {
+                    showToastNotification('No rekening disalin!');
+                })
+                .catch(() => {
+                    showToastNotification('Gagal menyalin!');
+                    fallbackCopyToClipboard(accountNumber); // Use fallback
+                });
+        } else {
+            fallbackCopyToClipboard(accountNumber); // Use fallback if Clipboard API is not supported
         }
+    };
+
+    const fallbackCopyToClipboard = (text) => {
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        document.body.appendChild(textarea);
+        textarea.select();
+        try {
+            document.execCommand('copy');
+            showToastNotification('No rekening disalin!');
+        } catch (err) {
+            showToastNotification('Gagal menyalin!');
+        }
+        document.body.removeChild(textarea);
     };
 
     return (
