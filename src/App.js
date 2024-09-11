@@ -1,31 +1,27 @@
 import './App.css';
 import 'leaflet/dist/leaflet.css';
 import MainScreen from './screens/MainScreen/MainScreen';
+import { Helmet } from 'react-helmet';
+
+import favicon3 from '../src/assets/favico/favicon512.png';
+
 
 function App() {
+
   return (
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    //   <div className="flex items-center justify-center h-screen bg-gray-100">
-    //     <h1 className="text-4xl font-bold text-blue-500">Hello, Tailwind CSS!</h1>
-    //   </div>
-
-    // </div>
-
     <>
+      <Helmet>
+        <meta name="description" content="Undangan pernikahan mempelai Dara & Asta" />
+        <meta property="og:title" content="Dara & Asta Wedding" />
+        <meta property="og:description" content="Undangan pernikahan mempelai Dara & Asta" />
+        <meta property="og:image" content={favicon3} />
+        <meta property="og:url" content="" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Dara & Asta Wedding" />
+        <meta name="twitter:description" content="Undangan pernikahan mempelai Dara & Asta" />
+        <meta name="twitter:image" content={favicon3} />
+      </Helmet>
       <MainScreen />
     </>
   );

@@ -10,31 +10,33 @@ import ThankYou from '../../sections/ThankYou/ThankYou'
 
 const WeddingInvitation = () => {
     return (
-        <div>
-            {/* <MobileStyledComponent /> */}
-            <WelcomePageMobile />
-            {/* <Quotes /> */}
-            <GroomBrideMobile />
-            <EventDetailsMobile />
-            <Rsvp />
-            <Wishes />
-            {/* <PictureGalleryMobile /> */}
-            <WeddingGift />
-            <ThankYou />
-            {/* <Carousel /> */}
-            {/* <ThankYouV3 /> */}
-            <FooterMobile />
+        <>
+            <div>
+                {/* <MobileStyledComponent /> */}
+                <WelcomePageMobile />
+                {/* <Quotes /> */}
+                <GroomBrideMobile />
+                <EventDetailsMobile />
+                <Rsvp />
+                <Wishes />
+                {/* <PictureGalleryMobile /> */}
+                <WeddingGift />
+                <ThankYou />
+                {/* <Carousel /> */}
+                {/* <ThankYouV3 /> */}
+                <FooterMobile />
 
-            {/* <WelcomePage /> */}
-            {/* <BrideGroom /> */}
-            {/* <TimelineContent /> */}
-            {/* <EventDetails /> */}
-            {/* <CountdownTimer /> */}
-            {/* <HealthProtocols /> */}
-            {/* <PictureGallery /> */}
-            {/* <ClosingPage /> */}
-            {/* <Footer /> */}
-        </div>
+                {/* <WelcomePage /> */}
+                {/* <BrideGroom /> */}
+                {/* <TimelineContent /> */}
+                {/* <EventDetails /> */}
+                {/* <CountdownTimer /> */}
+                {/* <HealthProtocols /> */}
+                {/* <PictureGallery /> */}
+                {/* <ClosingPage /> */}
+                {/* <Footer /> */}
+            </div>
+        </>
     )
 }
 

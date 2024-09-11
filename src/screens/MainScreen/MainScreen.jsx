@@ -22,6 +22,7 @@ const MainScreen = () => {
 
     const renderInvitation = () => (
         <>
+            
             <AnimatePresence>
                 {isInvitationOpen ? (
                     <>
