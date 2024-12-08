@@ -17,7 +17,7 @@ const LandingPageInvitation = ({ setInvitationOpen }) => {
 
                     <div className="flex flex-col items-center text-center z-20" >
                         <h1 className="text-4xl md:text-5xl font-extrabold font-adora-bouton mb-8 md:mb-10">The Wedding of</h1>
-                        <p className="text-5xl md:text-7xl font-extrabold font-cormorant mb-2">DARA <br />ASTA </p>
+                        <p className="text-5xl md:text-7xl font-extrabold font-cormorant mb-2">Bride <br />Groom </p>
                         <p className="text-lg md:text-2xl font-medium font-eb-garamond mb-4">6 Oktober 2024</p>
                     </div>
                     <p className=" text-black text-center my-1 z-20">

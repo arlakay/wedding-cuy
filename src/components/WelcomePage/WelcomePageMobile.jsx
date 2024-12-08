@@ -11,7 +11,7 @@ const WelcomePageMobile = () => {
                 <div className="flex-grow flex flex-col justify-center px-4">
                     <div className="text-start">
                         <h1 className="text-3xl font-bold font-adora-bouton">The Wedding of</h1>
-                        <p className="text-7xl font-semibold font-cormorant my-4">DARA <br />ASTA </p>
+                        <p className="text-7xl font-semibold font-cormorant my-4">Bride <br />Groom </p>
                         {/* <p className="text-lg font-normal font-cormorant my-4">Om Swastyastu</p> */}
                         <p className="text-md font-normal font-cormorant italic my-2 pt-10">“We’re all a little weird. And life is a little weird. And when we find someone whose weirdness is compatible with ours, we join up with them and fall into mutually satisfying weirdness—and call it love—true love”</p>
                         <p className="text-md font-normal font-cormorant ">— Robert Fulghum</p>
@@ -25,7 +25,7 @@ const WelcomePageMobile = () => {
                 </div>
                 {/* <div className=" p-4 text-center">
                     <h1 className="text-center font-eb-garamond text-xl md:text-2xl lg:text-2xl mb-8 pb-4">THANK YOU!</h1>
-                    <h1 className=" text-center font-adora-bouton text-4xl md:text-5xl lg:text-6xl mb-8">Asta & Dara</h1>
+                    <h1 className=" text-center font-adora-bouton text-4xl md:text-5xl lg:text-6xl mb-8">Groom & Bride</h1>
                 </div> */}
             </div>
         </div>

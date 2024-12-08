@@ -13,7 +13,7 @@ const FooterMobile = () => {
                     <div className="text-center ">
                         <p className="my-1 font-eb-garamond"></p>
                         <FaHeart className="mx-auto text-[24px] text-[#F8F8F8]" />
-                        <p className="my-1 font-eb-garamond">© 2024 Dara & Asta. All rights reserved.</p>
+                        <p className="my-1 font-eb-garamond">© 2024 Bride & Groom. All rights reserved.</p>
                     </div>
                     {/* <h1 className="text-center text-3xl font-bold mb-2">Centered Heading</h1>
                     <p className="text-lg">This is some centered content.</p>
@@ -21,7 +21,7 @@ const FooterMobile = () => {
                 </div>
                 {/* <div className=" p-4 text-center">
                     <h1 className="text-center font-eb-garamond text-xl md:text-2xl lg:text-2xl mb-8 pb-4">THANK YOU!</h1>
-                    <h1 className=" text-center font-adora-bouton text-4xl md:text-5xl lg:text-6xl mb-8">Asta & Dara</h1>
+                    <h1 className=" text-center font-adora-bouton text-4xl md:text-5xl lg:text-6xl mb-8">Groom & Bride</h1>
                 </div> */}
             </div>
         </div>

@@ -1,21 +1,21 @@
 import React, { useState, useEffect, useMemo } from 'react';
 
-import bg1 from '../../assets/thankyou/1.png';
-import bg2 from '../../assets/thankyou/2.png';
-import bg3 from '../../assets/thankyou/3.png';
-import bg4 from '../../assets/thankyou/4.png';
-import bg5 from '../../assets/thankyou/5.png';
-import bg6 from '../../assets/thankyou/6.png';
-import bg7 from '../../assets/thankyou/7.png';
-import bg8 from '../../assets/thankyou/8.png';
-import bg9 from '../../assets/thankyou/9.png';
-import bg10 from '../../assets/thankyou/10.png';
-import bg11 from '../../assets/thankyou/11.png';
-import bg12 from '../../assets/thankyou/12.png';
-import bg13 from '../../assets/thankyou/13.png';
-import bg14 from '../../assets/thankyou/14.png';
-import bg15 from '../../assets/thankyou/15.png';
-import bg16 from '../../assets/thankyou/16.png';
+import bg1 from '../../assets/thankyou/1.webp';
+import bg2 from '../../assets/thankyou/2.webp';
+import bg3 from '../../assets/thankyou/3.webp';
+import bg4 from '../../assets/thankyou/4.webp';
+import bg5 from '../../assets/thankyou/5.webp';
+import bg6 from '../../assets/thankyou/6.webp';
+import bg7 from '../../assets/thankyou/7.webp';
+import bg8 from '../../assets/thankyou/8.webp';
+import bg9 from '../../assets/thankyou/9.webp';
+import bg10 from '../../assets/thankyou/10.webp';
+import bg11 from '../../assets/thankyou/11.webp';
+import bg12 from '../../assets/thankyou/12.webp';
+import bg13 from '../../assets/thankyou/13.webp';
+import bg14 from '../../assets/thankyou/14.webp';
+import bg15 from '../../assets/thankyou/15.webp';
+import bg16 from '../../assets/thankyou/16.webp';
 
 const shuffleArray = (array) => {
     let shuffledArray = array.slice(); // Create a copy of the array
@@ -111,7 +111,7 @@ const ThankYou = () => {
                 <div className="flex-grow"></div>
                 <div className=" p-4 text-center z-20">
                     <h1 className="text-center font-eb-garamond text-xl md:text-2xl lg:text-2xl mb-8 pb-4 text-champagne-gold">THANK YOU!</h1>
-                    <h1 className=" text-center font-adora-bouton text-4xl md:text-5xl lg:text-6xl mb-8 text-champagne-gold">Dara & Asta</h1>
+                    <h1 className=" text-center font-adora-bouton text-4xl md:text-5xl lg:text-6xl mb-8 text-champagne-gold">Bride & Groom</h1>
                 </div>
             </div>
         </div >

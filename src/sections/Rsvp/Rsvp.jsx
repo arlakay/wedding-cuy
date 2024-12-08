@@ -9,13 +9,13 @@ const Rsvp = () => {
         e.preventDefault();
 
         // Construct the Google Form URL with UTM parameters for pre-filling
-        const googleFormUrl = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSc83yZsTEcEo0pAKadxtq9ahIYy6NN7vX7Dz4lkFjFQztC5Sw/formResponse"
+        const googleFormUrl = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdpcRYa27cqiO5g7g4XHEVL6fiUwG8iUSIqFfFuKOdjEpACVg/formResponse"
 
         // Map form data to Google Form input field names
         const params = new URLSearchParams({
-            'entry.2606285': name,
-            'entry.877086558': confirmation,
-            'entry.1498135098': totalPersons,
+            'entry.877086558': name,
+            'entry.1498135098': confirmation,
+            'entry.1424661284': totalPersons,
         });
 
         // Use fetch to submit the data
@@ -116,7 +116,7 @@ const Rsvp = () => {
                 </div>
                 {/* <div className=" p-4 text-center">
                     <h1 className="text-center font-eb-garamond text-xl md:text-2xl lg:text-2xl mb-8 pb-4">THANK YOU!</h1>
-                    <h1 className=" text-center font-adora-bouton text-4xl md:text-5xl lg:text-6xl mb-8">Asta & Dara</h1>
+                    <h1 className=" text-center font-adora-bouton text-4xl md:text-5xl lg:text-6xl mb-8">Groom & Bride</h1>
                 </div> */}
             </div >
         </div >

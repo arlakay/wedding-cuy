@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
-import bg17 from '../../assets/thankyou/1.png';
-import bg18 from '../../assets/thankyou/2.png';
-import bg19 from '../../assets/thankyou/3.png';
+import bg17 from '../../assets/thankyou/1.webp';
+import bg18 from '../../assets/thankyou/2.webp';
+import bg19 from '../../assets/thankyou/3.webp';
 import LazyLoad from 'react-lazyload';
 
 // Array of imported image URLs
@@ -62,7 +62,7 @@ const Carousel = () => {
                 <div className="flex-grow"></div>
                 <div className=" p-4 text-center z-20">
                     <h1 className="text-center font-eb-garamond text-xl md:text-2xl lg:text-2xl mb-8 pb-4 text-champagne-gold">THANK YOU!</h1>
-                    <h1 className=" text-center font-adora-bouton text-4xl md:text-5xl lg:text-6xl mb-8 text-champagne-gold">Asta & Dara</h1>
+                    <h1 className=" text-center font-adora-bouton text-4xl md:text-5xl lg:text-6xl mb-8 text-champagne-gold">Groom & Bride</h1>
                 </div>
             </div> */}
             {/* Navigation Buttons */}

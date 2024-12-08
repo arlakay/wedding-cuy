@@ -16,8 +16,8 @@ const Wishes = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [headers, setHeaders] = useState([]);
 
-    const googleSheetApiKey = "AIzaSyBz-lOhWdL0_TW3iAqjCPajjlrDfoSUyXw";
-    const sheetId = '1PkO7a1NlO_67yqy6BiTmPM5Cr0tLYBGDuWNiOreKOP0';
+    const googleSheetApiKey = "AIzaSyAOr4nKfHRApo1mJm_6LXxXqBMTYkOSlRY";
+    const sheetId = '1BIXE-pG2qDBwrvX-jkqNrbPXTwRJAV6upuorzluEhC4';
     const range = 'Form Responses 1'; // Specify the sheet name
 
     const fetchData = async () => {
@@ -78,12 +78,12 @@ const Wishes = () => {
         e.preventDefault();
 
         // Construct the Google Form URL with UTM parameters for pre-filling
-        const googleFormUrl = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSfMitrAcKG74fWU0dULwMVILJk69o3CUGyLTWh98lzGExArfg/formResponse';
+        const googleFormUrl = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSc7yZRrYEkjJHLa1EwaSPCKpekB9eL_gnJUcZndfGJ6Yyz1QQ/formResponse';
 
         // Map form data to Google Form input field names
         const params = new URLSearchParams({
-            'entry.1747016377': name,
-            'entry.305553560': wish,
+            'entry.877086558': name,
+            'entry.1498135098': wish,
         });
 
         // Use fetch to submit the data

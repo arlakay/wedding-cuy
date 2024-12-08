@@ -4,7 +4,7 @@ const Timeline = ({ data }) => {
     return (
         <div className="py-20 bg-[#5b3d2c] bg-cover bg-center bg-fixed bg-no-repeat">
             <div className="mb-15 text-center text-4xl text-white font-playfair">
-                <h2 className="font-light">Sepenggal Kisah Asta &amp; Dara</h2>
+                <h2 className="font-light">Sepenggal Kisah Groom &amp; Bride</h2>
             </div>
             {/* <div className="relative px-10 py-10 max-w-full mx-auto">
                 <div className="absolute top-0 bottom-0 left-1/2 transform -translate-x-1/2 bg-white w-1.5"></div>

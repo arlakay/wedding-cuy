@@ -27,8 +27,8 @@ const EventDetailsMobile = () => {
 
     const handleAddToGoogleCalendar = () => {
         const event = {
-            title: 'Wedding Dara & Asta',
-            description: 'Acara Resepsi Pernikahan Dara & Asta',
+            title: 'Wedding Bride & Groom',
+            description: 'Acara Resepsi Pernikahan Bride & Groom',
             location: 'Balai Makarti Muktitama',
             startTime: "2024-10-06T11:00:00",
             endTime: "2024-10-06T13:00:00",
@@ -103,7 +103,7 @@ const EventDetailsMobile = () => {
                 </div>
                 {/* <div className=" p-4 text-center">
                     <h1 className="text-center font-eb-garamond text-xl md:text-2xl lg:text-2xl mb-8 pb-4">THANK YOU!</h1>
-                    <h1 className=" text-center font-adora-bouton text-4xl md:text-5xl lg:text-6xl mb-8">Asta & Dara</h1>
+                    <h1 className=" text-center font-adora-bouton text-4xl md:text-5xl lg:text-6xl mb-8">Groom & Bride</h1>
                 </div> */}
             </div>
         </div>

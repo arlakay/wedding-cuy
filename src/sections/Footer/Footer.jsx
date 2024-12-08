@@ -7,7 +7,7 @@ const Footer = () => {
             <div className="text-center">
                 <p className="my-1">Designed &amp; Made with</p>
                 <FaHeart className="mx-auto text-[24px] text-white" />
-                <p className="my-1">by Asta &amp; Dara</p>
+                <p className="my-1">by Groom &amp; Bride</p>
             </div>
         </div>
     );

@@ -11,15 +11,15 @@ function App() {
   return (
     <>
       <Helmet>
-        <title>The Wedding of Dara & Asta</title>
+        <title>The Wedding of Bride & Groom</title>
         <meta name="description" content="You're invited" />
-        <meta property="og:title" content="The Wedding of Dara & Asta" />
+        <meta property="og:title" content="The Wedding of Bride & Groom" />
         <meta property="og:description" content="You're invited" />
         <meta property="og:image" content={favicon3} />
-        <meta property="og:url" content="https://astadarawedding.site/" />
+        <meta property="og:url" content="https://groomnbridewedding.site/" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="The Wedding of Dara & Asta" />
+        <meta name="twitter:title" content="The Wedding of Bride & Groom" />
         <meta name="twitter:description" content="You're invited" />
         <meta name="twitter:image" content={favicon3} />
       </Helmet>

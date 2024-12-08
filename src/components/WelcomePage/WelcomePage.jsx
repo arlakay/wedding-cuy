@@ -6,7 +6,7 @@ const WelcomePage = () => {
     <div className="flex flex-col items-center justify-center h-screen bg-backdrop-img-ten bg-cover bg-no-repeat bg-center">
       <div className="mt-2.5">
         <HeaderSeparator />
-        <p className="text-black font-kaushan text-[120px] text-center">Asta &amp; Dara</p>
+        <p className="text-black font-kaushan text-[120px] text-center">Bride &amp; Groom</p>
         <HeaderSeparator />
       </div>
       <p className="mt-12.5 text-black font-poppins font-medium text-[24px] leading-[50px] text-center">
